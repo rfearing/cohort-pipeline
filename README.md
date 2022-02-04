@@ -1,5 +1,7 @@
 # cohort-pipeline
-Build pipeline from the SB Exploring Cohort
+Build pipeline from the SB Exploring Cohort led by our fearless TD:
+
+<img src="public/images/tarr.png" alt="Rob Tar in a docker container" />
 
 <!--
 Resources used:
