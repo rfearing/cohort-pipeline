@@ -5,9 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start": "NODE_PATH=./build node build/index.js",
-    "build": "tsc -p .",
+    "build": "npm run ts-compile && npm run copy",
     "dev": "nodemon src/index.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ts-compile": "tsc -p .",
+    "copy": "cp src/app.html build/app.html"
   },
   "repository": {
     "type": "git",
@@ -23,7 +25,7 @@
   "nodemonConfig": {
     "verbose": true,
     "ignore": [],
-    "watch": ["src/**/*.ts"],
+    "watch": ["src/**/*.ts", "src/**/*.html"],
     "execMap": {
       "ts": "node --inspect=0.0.0.0:9229 --nolazy -r ts-node/register"
     }

@@ -1,7 +1,7 @@
 version: '3.7'
 
 services:
-  ts-node-docker:
+  todo_app:
     build:
       context: .
       dockerfile: Dockerfile
@@ -9,7 +9,8 @@ services:
     volumes:
       - ./src:/home/node/app/src
       - ./nodemon.json:/home/node/app/nodemon.json
-    container_name: ts-node-docker
+      - ./src/app.html:/home/node/app/src/app.html
+    container_name: todo_app
     expose:
       - '4000'
     ports:
