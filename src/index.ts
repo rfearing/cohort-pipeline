@@ -2,6 +2,8 @@ import express from 'express';
 
 const app = express();
 app.get('/', (req, res) => {
+  // Uncomment below to see error.
+  // let test = 'test';
   res.send('Hello World!')
 })
 
